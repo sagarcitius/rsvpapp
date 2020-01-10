@@ -1,0 +1,164 @@
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mljth[0m
+{"level":"warn","ts":1578637556.1851435,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578637556.1855175,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-p2hbx[0m
+{"level":"warn","ts":1578637557.1819713,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1578637557.1831348,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sagarcitius-rsvpapp-master-4cbct[0m
+{"level":"warn","ts":1578637585.2345357,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578637587.3853812,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/***********/rsvpapp.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:53c41ec9f9633e99c3119d4ad865f14eddbe3f0b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image teamcloudyuga/python:alpine 
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:5ffa34a66d3e81d4de2103282fbbfd3ab52a4a8ea76d03271bfad38b67ecbdba: no such file or directory 
+[36mINFO[0m[0002] Downloading base image teamcloudyuga/python:alpine 
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Checking for cached layer 746149138047.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:bcba6a11d5659b86be2cf1dd472e79ad927be65bfd1b40ff1906bdb6fe394378... 
+[36mINFO[0m[0004] No cached layer found for cmd RUN pip3 install -r requirements.txt 
+[36mINFO[0m[0004] Unpacking rootfs as cmd RUN pip3 install -r requirements.txt requires it. 
+[36mINFO[0m[0007] Taking snapshot of full filesystem...        
+[36mINFO[0m[0008] Using files from context: [/workspace/source] 
+[36mINFO[0m[0008] COPY . /usr/src/app                          
+[36mINFO[0m[0008] Taking snapshot of files...                  
+[36mINFO[0m[0008] WORKDIR /usr/src/app                         
+[36mINFO[0m[0008] cmd: workdir                                 
+[36mINFO[0m[0008] Changed working directory to /usr/src/app    
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV LINK http://www.meetup.com/cloudyuga/    
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV TEXT1 CloudYuga                          
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV TEXT2 Garage RSVP!                       
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV LOGO https://raw.githubusercontent.com/cloudyuga/rsvpapp/master/static/cloudyuga.png 
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] ENV COMPANY CloudYuga Technology Pvt. Ltd.   
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] RUN pip3 install -r requirements.txt         
+[36mINFO[0m[0008] cmd: /bin/sh                                 
+[36mINFO[0m[0008] args: [-c pip3 install -r requirements.txt]  
+Collecting flask (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+Collecting pymongo (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/dc/9b/6791f7219f3573bfaa2251da4d814f4fbc49f0bbb258df1e08f7d89a7b85/pymongo-3.10.1.tar.gz (715kB)
+Collecting pytest (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/19/cf/711f1d887cb92c5155c9a1eb338f1b5d2411b50e4492a3b20e4a188a22b2/pytest-5.3.2-py3-none-any.whl (234kB)
+Collecting mongomock (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/84/25/574d20c1f1c58fcc6afce7f6eecc5e59bcd8a5b82166a63ca17759c40d97/mongomock-3.18.0-py2.py3-none-any.whl (47kB)
+Collecting itsdangerous>=0.24 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Jinja2>=2.10.1 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+Collecting click>=5.1 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Werkzeug>=0.15 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+Collecting importlib-metadata>=0.12; python_version < "3.8" (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/e9/71/1a1e0ed0981bb6a67bce55a210f168126b7ebd2065958673797ea66489ca/importlib_metadata-1.3.0-py2.py3-none-any.whl
+Collecting packaging (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/d8/5b/3098db49a61ccc8583ffead6aedc226f08ff56dc03106b6ec54451e27a30/packaging-20.0-py2.py3-none-any.whl
+Collecting wcwidth (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/58/b4/4850a0ccc6f567cc0ebe7060d20ffd4258b8210efadc259da62dc6ed9c65/wcwidth-0.1.8-py2.py3-none-any.whl
+Collecting attrs>=17.4.0 (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+Collecting more-itertools>=4.0.0 (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/68/03/0604cec1ea13c9f063dd50f900d1a36160334dd3cfb01fd0e638f61b46ba/more_itertools-8.0.2-py3-none-any.whl (40kB)
+Collecting py>=1.5.0 (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/99/8d/21e1767c009211a62a8e3067280bfce76e89c9f876180308515942304d2d/py-1.8.1-py2.py3-none-any.whl (83kB)
+Collecting pluggy<1.0,>=0.12 (from pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+Collecting six (from mongomock->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
+Collecting sentinels (from mongomock->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/ac/b7/1af07a98390aba07da31807f3723e7bbd003d6441b4b3d67b20d97702b23/sentinels-1.0.0.tar.gz
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10.1->flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz
+Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
+Collecting pyparsing>=2.0.2 (from packaging->pytest->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
+Installing collected packages: itsdangerous, MarkupSafe, Jinja2, click, Werkzeug, flask, pymongo, more-itertools, zipp, importlib-metadata, six, pyparsing, packaging, wcwidth, attrs, py, pluggy, pytest, sentinels, mongomock
+  Running setup.py install for MarkupSafe: started
+    Running setup.py install for MarkupSafe: finished with status 'done'
+  Running setup.py install for pymongo: started
+    Running setup.py install for pymongo: finished with status 'done'
+  Running setup.py install for sentinels: started
+    Running setup.py install for sentinels: finished with status 'done'
+Successfully installed Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 attrs-19.3.0 click-7.0 flask-1.1.1 importlib-metadata-1.3.0 itsdangerous-1.1.0 mongomock-3.18.0 more-itertools-8.0.2 packaging-20.0 pluggy-0.13.1 py-1.8.1 pymongo-3.10.1 pyparsing-2.4.6 pytest-5.3.2 sentinels-1.0.0 six-1.13.0 wcwidth-0.1.8 zipp-0.6.0
+You are using pip version 8.1.2, however version 19.3.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0018] Taking snapshot of full filesystem...        
+[36mINFO[0m[0019] Pushing layer 746149138047.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:bcba6a11d5659b86be2cf1dd472e79ad927be65bfd1b40ff1906bdb6fe394378 to cache now 
+[36mINFO[0m[0019] CMD python rsvp.py                           
+[36mINFO[0m[0019] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0019] error uploading layer to cache: failed to push to destination 746149138047.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:bcba6a11d5659b86be2cf1dd472e79ad927be65bfd1b40ff1906bdb6fe394378: NAME_UNKNOWN: The repository with name 'todo/cache' does not exist in the registry with id '746149138047' 
+2020/01/10 06:26:49 pushed blob: sha256:69f3faa06d29cf1d762d6793d1ff60ff98487ad3c06fbf0abe9373e56a005e32
+2020/01/10 06:26:49 pushed blob: sha256:c208cf6368da7f784a5a8f0f25b03af4b8d4e7801c45b594d0d86aeef8e4b1f8
+2020/01/10 06:26:49 pushed blob: sha256:809f49334738c14d17682456fd3629207124c4fad3c28f04618cc154d22e845b
+2020/01/10 06:26:50 pushed blob: sha256:c0cb142e43453ebb1f82b905aa472e6e66017efd43872135bc5372e4fac04031
+2020/01/10 06:26:50 pushed blob: sha256:bc4d09b6c77b25d6d3891095ef3b0f87fbe90621bff2a333f9b7f242299e0cfd
+2020/01/10 06:26:50 pushed blob: sha256:3caf350e115948060a4146ea55d0a3327db36f12475b4d20d77fe5408c5c793d
+2020/01/10 06:26:51 pushed blob: sha256:606abda6711f8f4b91bbb139f8f0da67866c33378a6dcac958b2ddc54f0befd2
+2020/01/10 06:26:51 746149138047.dkr.ecr.ap-south-1.amazonaws.com/***********/rsvpapp:0.0.1: digest: sha256:0f89f86bc5f64bbf4c05ba268f381cb90f120c4eb248f75f3526c584567d6be8 size: 1243
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/rsvpapp to an unshallow repository
+Generating change log from git ref b8a9fe8951311a33ccb3c907e3c2ac9007a62fcc => 8fda842bfd7e35ed088c0292a19f0f47b50d4f19
+Associating user x-0 in users.jenkins.io with email sagar.pimparkar@citiustech.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 53c41ec9f9633e99c3119d4ad865f14eddbe3f0b with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for ***********/rsvpapp and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/***********/rsvpapp/releases/tag/v0.0.1
+generated: /workspace/source/charts/rsvpapp/templates/release.yaml
+Created Release rsvpapp-0-0-1 resource in namespace **
+Updating PipelineActivity ***********-rsvpapp-master-1 with version 0.0.1
+Updated PipelineActivities ***********-rsvpapp-master-1 with release notes URL: https://github.com/***********/rsvpapp/releases/tag/v0.0.1
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file rsvpapp-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32msagarcitius-rsvpapp-master-tlksk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app rsvpapp version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/***********/environment-liondeep-staging/pull/1
+Added label updatebot to Pull Request https://github.com/***********/environment-liondeep-staging/pull/1
+got git provider status pending from PR https://github.com/***********/environment-liondeep-staging/pull/1
+got git provider status pending from PR https://github.com/***********/environment-liondeep-staging/pull/1
+got git provider status pending from PR https://github.com/***********/environment-liondeep-staging/pull/1
+got git provider status pending from PR https://github.com/***********/environment-liondeep-staging/pull/1
+got git provider status pending from PR https://github.com/***********/environment-liondeep-staging/pull/1
+Pull Request https://github.com/***********/environment-liondeep-staging/pull/1 is merged at sha 7d59430794a8980d2262df0df79a85ffe9a99209
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names rsvpapp, **-rsvpapp, **-staging-rsvpapp
